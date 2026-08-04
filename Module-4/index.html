@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex layout</title>
+    <style>
+        div{
+            font-size: 2rem;
+        }
+        .container{
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        .box{
+            border: 3px solid royalblue;
+            height: 100px;
+        }
+        .user-container{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+       .user{
+        border: 3px solid red;
+        height: 100px;
+       }
+       .pic-container{
+        border: 3px solid green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+       }
+       .picture{
+        width: 200px;
+        height: 200px;
+        border: solid 2px royalblue;
+       }
+    </style>
+</head>
+<body>
+
+    <div class="pic-container">
+        <div class="picture">Picture</div>
+    </div>
+
+    <div class="user-container">
+        <div class="user">user 1</div>
+        <div class="user">user 2</div>
+        <div class="user">user 3</div>
+        <div class="user">user 4</div>
+        <div class="user">user 5</div>
+        <div class="user">user 6</div>
+        <div class="user">user 7</div>
+        <div class="user">user 8</div>
+        <div class="user">user 9</div>
+        <div class="user">user 10</div>
+        <div class="user">user 11</div>
+        <div class="user">user 12</div>
+        <div class="user">user 13</div>
+        <div class="user">user 14</div>
+        <div class="user">user 15</div>
+        <div class="user">user 16</div>
+        <div class="user">user 17</div>
+        <div class="user">user 18</div>
+        <div class="user">user 19</div>
+        <div class="user">user 20</div>
+    </div>
+
+
+    <div class="container">
+        <div class="box">box 1</div>
+        <div class="box">box 2</div>
+        <div class="box">box 3</div>
+        <div class="box">box 4</div>
+        <div class="box">box 5</div>
+    </div>
+</body>
+</html>

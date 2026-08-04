@@ -1,0 +1,35 @@
+/*
+        *{
+            margin: 0;
+        }
+        article{
+            background-color: lightblue;
+            border: 2px solid olivedrab;
+            text-align: justify;
+            margin: 10px ;
+            padding: 10px;
+        }
+        /* #second-article{
+            display: none;
+} */
+
+.blog {
+    background-color: rgb(237, 158, 158);
+    width: 400px;
+    margin: 20px;
+    padding: 15px;
+    box-shadow: 10px 10px 20px rgb(86, 51, 38);
+}
+
+#header {
+    background-color: cadetblue;
+    background-image: url('tree.jpg');
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#header h1 {
+    text-align: center;
+}

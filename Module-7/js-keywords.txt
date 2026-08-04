@@ -1,0 +1,12 @@
+| Category              | Keywords                                                     |
+| --------------------- | ------------------------------------------------------------ |
+| Variable declarations | `var`, `let`, `const`                                        |
+| Control flow          | `if`, `else`, `switch`, `case`, `default`                    |
+| Loops                 | `for`, `while`, `do`, `break`, `continue`                    |
+| Functions             | `function`, `return`                                         |
+| Classes & Objects     | `class`, `extends`, `super`, `new`, `this`                   |
+| Error handling        | `try`, `catch`, `finally`, `throw`                           |
+| Modules               | `import`, `export`                                           |
+| Async programming     | `async`, `await`                                             |
+| Operators             | `typeof`, `instanceof`, `delete`, `in`                       |
+| Miscellaneous         | `null`, `true`, `false`, `void`, `yield`, `with`, `debugger` |

@@ -1,0 +1,36 @@
+
+// Falsy values — এই ৬টার একটাও if এর ভেতরে ঢুকবে না
+if (false) {
+    console.log("false");
+} else if(5>6){
+
+} else if(100>200){
+    
+}else{
+
+}
+
+if (0) {
+    console.log(0);
+} else{
+    console.log("0 is a falsy value");
+}
+
+if ("") {
+    console.log("");
+}
+
+if (null) {
+    console.log(null);
+}
+if (undefined) {
+    console.log(undefined);
+}
+if (NaN) {
+    console.log("Not a Number");
+}
+
+// Truthy examples — এগুলো সবসময় চলবে
+if ("hello") console.log("truthy");
+if ([]) console.log("empty array is a truthy"); // empty array-ও truthy!
+if ({}) console.log("truthy"); // empty object-ও truthy!

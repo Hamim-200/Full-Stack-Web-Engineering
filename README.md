@@ -15,4 +15,7 @@
 * Module - 13 : Javascript Problem Solving
 * Module - 14 : Javascript Debugging
 * Module - 15 : Assignment - 2
-* Module - 15 : ES6 Fundamental
+* Module - 16 : ES6 Fundamental
+* Module - 17 : More ES6 
+* Module - 18 : Problem Solving with ES6 
+* Module - 19 : Problem Solving with ES6 

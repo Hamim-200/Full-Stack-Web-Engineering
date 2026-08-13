@@ -1,0 +1,1 @@
+// 1. Combine two arrays into one new array. Log the result.

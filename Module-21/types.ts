@@ -1,4 +1,4 @@
-const district: string = 'Dhaka';
+let district: string = 'Dhaka';
 
 district = 'chandpur';
 

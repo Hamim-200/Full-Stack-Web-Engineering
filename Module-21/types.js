@@ -1,5 +1,8 @@
 "use strict";
-const district = "Dhaka";
+let district = 'Dhaka';
 district = 'chandpur';
 const stock = 100;
-const isAvailable = console.log(district);
+const isAvailable = false;
+
+
+console.log(district);

@@ -10,6 +10,7 @@ const bookDetails: {
     price: number;
     author: string;
     pages: number;
+    isUsed?: boolean; // Optional property  
 } = {
     name: "Chemistry",
     price: 200,

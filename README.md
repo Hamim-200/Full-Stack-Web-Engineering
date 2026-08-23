@@ -21,4 +21,7 @@
 * Module - 19 : Problem Solving with ES6 
 * Module - 20 : Assignment - 2 
 * Module - 21 : Introduction to Typescript 
-* Module - 21 : More Typescript 
+* Module - 22 : More Typescript 
+* Module - 23 : OOP in Typescript 
+* Module - 24 : Typescript Problem Solving 
+* Module - 25 : Assignment-4

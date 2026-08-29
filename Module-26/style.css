@@ -1,0 +1,28 @@
+.demo {
+    font-size: 120px;
+    font-weight: bold;
+    background-color: forestgreen;
+    color: crimson;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .demo {
+        font-size: 80px;
+        font-weight: normal;
+        font-style: italic;
+        background-color: orange;
+        color: blue;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .demo {
+        font-size: 30px;
+        font-weight: lighter;
+        font-style: oblique;
+        background-color: black;
+        color: white;
+    }
+}

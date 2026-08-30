@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature's Platter Web Project</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- FONT awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="bg-[#f1eee7]">
+        <nav class="grid grid-cols-3 gap-4 container mx-auto pt-4">
+            <img src="./images/nav-logo.png" alt="" class="w-30 h-auto">
+
+            <ul class="flex gap-4 items-center">
+                <li><a href="">Product</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+
+            <div class="flex gap-4 items-center">
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                <span><i class="fa-solid fa-cart-shopping"></i></span>
+                <button class="rounded border-2 border-green-500 font-semibold px-3 py-1">Login</button>
+                <button class="rounded bg-green-500 font-semibold px-3 py-1 text-white">Register</button>
+            </div>
+        </nav>
+
+
+        <section class="text-center py-5">
+            <div class="max-w-[40%] mx-auto">
+                <h2 class="font-bold text-4xl mb-4">Freshness <span class="text-green-500">You Can <br> Count</span> On,
+                    Prices You’ll Love!</h2>
+                <p>Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, we’ve got you
+                    covered every day!</p>
+            </div>
+            <img src="./images/Hero Section 1.png" alt=""
+                class="mx-auto max-w-[450px] sm:max-w-[550px] md:max-w-[830px] h-auto">
+        </section>
+    </header>
+
+    <!-- service section -->
+    <section class="container mx-auto my-20">
+        <h2 class="text-green-500 font-bold text-4xl mb-3">Services</h2>
+
+        <div class="flex flex-col md:flex-row  gap-4">
+            <div class="text-center bg-[#efebe3] rounded-md p-4 space-y-4">
+                <div class="bg-white rounded-full h-30 w-30 flex justify-center items-center p-4 mx-auto">
+                    <img src="./images/delivery.png" alt="">
+                </div>
+                <h2 class="font-semibold text-2xl">24/7 Services </h2>
+                <p>Get reliable service and support whenever you need it, day or night.</p>
+            </div>
+
+            <div class="text-center bg-[#efebe3] rounded-md p-4 space-y-4">
+                <div class="bg-white rounded-full h-30 w-30 flex justify-center items-center p-4 mx-auto">
+                    <img src="./images/grocery-basket.png" alt="">
+                </div>
+                <h2 class="font-semibold text-2xl">Fresh Groceries </h2>
+                <p>Shop fresh, quality groceries and everyday essentials at affordable prices.</p>
+            </div>
+
+            <div class="text-center bg-[#efebe3] rounded-md p-4 space-y-4">
+                <div class="bg-white rounded-full h-30 w-30 flex justify-center items-center p-4 mx-auto">
+                    <img src="./images/service.png" alt="">
+                </div>
+                <h2 class="font-semibold text-2xl">Quality Service </h2>
+                <p>We are committed to providing fast, friendly, and dependable service every time.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

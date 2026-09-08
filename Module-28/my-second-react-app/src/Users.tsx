@@ -20,15 +20,19 @@
 // }
 
 import { use } from "react"
+import UserCard from "./UserCard";
 
 
-function Users({usersDataPromise}) {
+function Users({ usersDataPromise }) {
     const users = use(usersDataPromise);
     console.log(users);
 
-    return(
+    return (
         <div>
             <h3>Users: {users.length}</h3>
+            {
+                users.map(user => <UserCard user={user} />)
+            }
         </div>
     )
 

@@ -3,3 +3,14 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
+
+.visitedFlagesDiv{
+    border: 1px solid orangered;
+    padding: 10px;
+}
+
+.visitedFlagesDiv img{
+    height: 50px;
+    width: 50px;
+    margin-left: 15px;
+}

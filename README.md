@@ -25,3 +25,10 @@
 * Module - 23 : OOP in Typescript 
 * Module - 24 : Typescript Problem Solving 
 * Module - 25 : Assignment-4
+* Module - 26 : Web Design with Tailwind
+* Module - 27 : React Core - Components, JSX, props & Rendering
+* Module - 28 : State Management in React
+* Module - 29 : React Project- Countries Explorer
+* Module - 30 : JS DOM And BOM
+* Module - 31 : Simple Real SPA  with BPL DReam
+* Module - 30 : Assignment- 5

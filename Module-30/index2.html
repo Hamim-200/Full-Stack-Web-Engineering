@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+</head>
+
+<body>
+
+    <div id="bd">
+        <h2>Hello Bangladesh</h2>
+        <p>This is a paragraph.</p>
+    </div>
+
+    <script>
+
+        // Select the div
+        const bd = document.getElementById("bd");
+
+
+        // 1. textContent
+        console.log("textContent:");
+        // Output: textContent:
+
+        console.log(bd.textContent);
+        // Output:
+        // 
+        //         Hello Bangladesh
+        //         This is a paragraph.
+        //
+        // Description:
+        // textContent gives ALL the text inside the div.
+        // It does NOT include the HTML tags (<h2>, <p>).
+
+
+        // 2. innerHTML
+        console.log("innerHTML:");
+        // Output: innerHTML:
+
+        console.log(bd.innerHTML);
+        // Output:
+        //
+        //         <h2>Hello Bangladesh</h2>
+        //         <p>This is a paragraph.</p>
+        //
+        // Description:
+        // innerHTML gives everything inside the div,
+        // including the HTML tags.
+
+
+        // 3. innerText
+        console.log("innerText:");
+        // Output: innerText:
+
+        console.log(bd.innerText);
+        // Output:
+        //
+        // Hello Bangladesh
+        // This is a paragraph.
+        //
+        // Description:
+        // innerText gives the VISIBLE text inside the div.
+        // It does not include the HTML tags.
+
+    </script>
+
+</body>
+
+</html>

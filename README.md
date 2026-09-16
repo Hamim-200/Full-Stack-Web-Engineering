@@ -31,4 +31,5 @@
 * Module - 29 : React Project- Countries Explorer
 * Module - 30 : JS DOM And BOM
 * Module - 31 : Simple Real SPA  with BPL DReam
-* Module - 30 : Assignment- 5
+* Module - 32 : Assignment- 5
+* Module - 33 : NEXT JS - Page, Routing & More 

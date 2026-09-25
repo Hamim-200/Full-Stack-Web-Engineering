@@ -1,8 +1,15 @@
+'use client'
+
 import Image from "next/image";
-import React from "react";
 import logo from "@/assets/book.ico";
+import Link from "next/link";
+import { BooksContext } from '@/context/BooksContext';
+import { useContext } from "react";
 
 const Navbar = () => {
+
+    const { readBooks, wishlist } = useContext(BooksContext);
+
     return (
         <nav className="navbar bg-white border-b border-gray-100 shadow-sm">
             <div className="container mx-auto flex w-full items-center px-4">
@@ -39,7 +46,7 @@ const Navbar = () => {
                         >
                             <li>
                                 <a className="rounded-xl hover:bg-emerald-50 hover:text-emerald-600">
-                                    Item 1
+                                    {/* <Link href= "/books">Books</Link> */}
                                 </a>
                             </li>
 
@@ -78,15 +85,15 @@ const Navbar = () => {
                     <ul className="menu menu-horizontal gap-1 px-1">
                         <li>
                             <a className="rounded-xl px-4 text-gray-600 transition hover:bg-emerald-50 hover:text-emerald-600">
-                                Item 1
+                                <Link href="/books">Books</Link>
+                            </a>
+                        </li>
+                        <li>
+                            <a className="rounded-xl px-4 text-gray-600 transition hover:bg-emerald-50 hover:text-emerald-600">
+                                <Link href="/listed-books">Listed Books</Link>
                             </a>
                         </li>
 
-                        <li>
-                            <a className="rounded-xl px-4 text-gray-600 transition hover:bg-emerald-50 hover:text-emerald-600">
-                                Parent
-                            </a>
-                        </li>
 
                         <li>
                             <a className="rounded-xl px-4 text-gray-600 transition hover:bg-emerald-50 hover:text-emerald-600">
@@ -97,7 +104,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Buttons */}
-                <div className="navbar-end gap-2">
+                {/* <div className="navbar-end gap-2">
                     <button className="btn rounded-xl border-gray-200 bg-white text-gray-700 hover:border-emerald-400 hover:bg-emerald-50 hover:text-emerald-600">
                         Sign In
                     </button>
@@ -105,6 +112,16 @@ const Navbar = () => {
                     <button className="btn rounded-xl border-0 bg-emerald-600 text-white shadow-md shadow-emerald-200 hover:bg-emerald-700">
                         Sign Up
                     </button>
+                </div> */}
+
+                <div className="navbar-end flex items-center gap-2">
+                    <span className="rounded-full bg-blue-50 px-3 py-2 text-sm font-semibold text-blue-700">
+                        Reading: {readBooks.length}
+                    </span>
+
+                    <span className="rounded-full bg-purple-50 px-3 py-2 text-sm font-semibold text-purple-700">
+                        Wishlist: {wishlist.length}
+                    </span>
                 </div>
 
             </div>

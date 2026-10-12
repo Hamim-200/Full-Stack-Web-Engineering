@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Event Handler Example</title>
+  <style>
+    /* Basic Layout: Main content on left, Sidebar on right */
+    body {
+      font-family: sans-serif;
+      display: flex;
+      gap: 20px;
+      margin: 20px;
+    }
+
+    main {
+      flex: 1;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    aside {
+      width: 250px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+
+    input {
+      padding: 8px;
+      font-size: 14px;
+    }
+
+    button {
+      padding: 8px 12px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <h2>Input Section</h2>
+    <input type="text" id="userInput" placeholder="Type something...">
+    <button id="showBtn">Okay</button>
+  </main>
+
+  <aside>
+    <h3>Sidebar</h3>
+    <p id="sidebarText">Nothing submitted yet.</p>
+  </aside>
+
+  <script>
+    // 1. Get references to HTML elements
+    const userInput = document.getElementById('userInput');
+    const showBtn = document.getElementById('showBtn');
+    const sidebarText = document.getElementById('sidebarText');
+
+    // 2. Define the event handler function
+    function handleClick() {
+      // Get what the user typed
+      const text = userInput.value;
+
+      // Update the sidebar text (or show default if empty)
+      if (text.trim() !== '') {
+        sidebarText.textContent = text;
+      } else {
+        sidebarText.textContent = 'Please enter some text!';
+      }
+    }
+
+    // 3. Attach the event handler to the button click
+    showBtn.addEventListener('click', handleClick);
+  </script>
+
+</body>
+</html>

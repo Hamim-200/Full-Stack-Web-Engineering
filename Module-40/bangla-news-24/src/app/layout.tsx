@@ -1,0 +1,29 @@
+import type { Metadata } from "next";
+import { Noto_Serif_Bengali } from "next/font/google";
+import "./globals.css";
+import Header from "@/components/Header";
+
+const notoSerifBengali = Noto_Serif_Bengali({
+  subsets: ["latin", "bengali"],
+});
+
+export const metadata: Metadata = {
+  title: "Bangla News 24",
+  description: "A simple news website",
+};
+
+export default function RootLayout({ children }: LayoutProps<"/">) {
+  return (
+    <html
+      data-theme = "light"
+      lang="en"
+      className={`${notoSerifBengali.className}h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col">
+        <Header></Header>
+        {children}
+        <div>Footer</div>
+      </body>
+    </html>
+  );
+}

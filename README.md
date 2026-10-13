@@ -33,3 +33,12 @@
 * Module - 31 : Simple Real SPA  with BPL DReam
 * Module - 32 : Assignment- 5
 * Module - 33 : NEXT JS - Page, Routing & More 
+* Module - 34 : NEXT JS - Rendering Basics 
+* Module - 35 : Advanced Data fetching and UI Integration 
+* Module - 36 : Book Vibe Project With Next Js and TS 
+* Module - 37 : Assignment 6
+* Module - 38 : 
+* Module - 39 : 
+* Module - 40 : 
+* Module - 41 : 
+* Module - 42 : Assignment - 7

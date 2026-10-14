@@ -37,8 +37,8 @@
 * Module - 35 : Advanced Data fetching and UI Integration 
 * Module - 36 : Book Vibe Project With Next Js and TS 
 * Module - 37 : Assignment 6
-* Module - 38 : 
-* Module - 39 : 
-* Module - 40 : 
-* Module - 41 : 
+* Module - 38 : Authentication in NextJS with BetterAuth
+* Module - 39 : Authentication Advance - Profile, Password, Email
+* Module - 40 : Bangla News 24 Next.JS project with Authentication-1 
+* Module - 41 : Bangla News 24 Next.JS project with Authentication-2
 * Module - 42 : Assignment - 7

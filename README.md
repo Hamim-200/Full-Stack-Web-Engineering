@@ -42,3 +42,4 @@
 * Module - 40 : Bangla News 24 Next.JS project with Authentication-1 
 * Module - 41 : Bangla News 24 Next.JS project with Authentication-2
 * Module - 42 : Assignment - 7
+* Module - 43 :NEXT.JS and Express from setup to first API

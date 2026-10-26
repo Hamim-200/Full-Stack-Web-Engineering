@@ -42,4 +42,6 @@
 * Module - 40 : Bangla News 24 Next.JS project with Authentication-1 
 * Module - 41 : Bangla News 24 Next.JS project with Authentication-2
 * Module - 42 : Assignment - 7
-* Module - 43 :NEXT.JS and Express from setup to first API
+* Module - 43 : NEXT.JS and Express from setup to first API
+* Module - 44 : REST API & CRUD Operators with Express and MongoDB
+* Module - 45 : Deep Dive into mongoDB operators and Queries

@@ -187,3 +187,166 @@ db.jobs.find().sort({ location: 1, salary: -1 })
 db.jobs.find().limit(5)
 
 
+// =========Aggregation Pipeline — $match, $group, $project========
+
+//  শুধু active চাকরিগুলো নিন
+db.jobs.aggregate([
+    { $match: { status: "active" } }
+])
+
+// $group — ডেটা গ্রুপ করুন
+// প্রতিটা শহরে কতটা চাকরি আছে?
+db.jobs.aggregate([
+    {
+        $group: {
+            _id: "$location",
+            totalJobs: { $sum: 1 }
+        }
+    }
+])
+
+// প্রতিটা শহরে গড় বেতন কত?
+db.jobs.aggregate([
+    {
+        $group: {
+            _id: "$location",
+            avgSalary: { $avg: "$salary" },
+            maxSalary: { $max: "$salary" },
+            minSalary: { $min: "$salary" },
+            totalJobs: { $sum: 1 }
+        }
+    }
+])
+
+// $project — আউটপুট ফিল্ড কাস্টমাইজ করুন
+// শুধু title এবং company দেখাও, _id বাদ দাও
+db.jobs.aggregate([
+    {
+        $project: {
+            title: 1,
+            company: 1,
+            _id: 0
+        }
+    }
+])
+
+// নতুন calculated ফিল্ড তৈরি করুন:
+db.jobs.aggregate([
+    {
+        $project: {
+            title: 1,
+            salary: 1,
+            monthlySalary: "$salary",
+            annualSalary: { $multiply: ["$salary", 12] }
+        }
+    }
+])
+
+// শুধু active চাকরি নিয়ে, department অনুযায়ী গড় বেতন হিসাব করো, এবং সর্টেড আউটপুট দাও
+db.jobs.aggregate([
+    { $match: { status: "active" } },
+    {
+        $group: {
+            _id: "$department",
+            avgSalary: { $avg: "$salary" },
+            jobCount: { $sum: 1 }
+        }
+    },
+    {
+        $project: {
+            department: "$_id",
+            avgSalary: { $round: ["$avgSalary", 0] },
+            jobCount: 1,
+            _id: 0
+        }
+    },
+    { $sort: { avgSalary: -1 } }
+])
+
+db.companies.insertMany([
+    { name: "TechCorp Bangladesh", founded: 2015, employees: 500, industry: "Software" },
+    { name: "Digital Solutions", founded: 2018, employees: 120, industry: "Web" },
+    { name: "AIVentures", founded: 2020, employees: 80, industry: "AI/ML" },
+    { name: "CloudBase Ltd", founded: 2017, employees: 200, industry: "Cloud" },
+    { name: "CreativeMinds", founded: 2019, employees: 50, industry: "Design" }
+]);
+
+// 📌 $lookup — দুটো Collection Join করুন
+// মানে: 'এই collection-এর ডেটার সাথে অন্য collection-এর ডেটা যুক্ত করো
+
+db.jobs.aggregate([
+    {
+        $lookup: {
+            from: "companies",
+            localField: "company",
+            foreignField: "name",
+            as: "companyDetails"
+        }
+    },
+    {
+        $project: {
+            title: 1,
+            salary: 1,
+            companyDetails: 1,
+            _id: 0
+        }
+    },
+    { $limit: 5 }
+])
+
+// 📌 $unwind — অ্যারে Flat করুন
+// মানে: 'অ্যারের প্রতিটা এলিমেন্টের জন্য আলাদা ডকুমেন্ট তৈরি করো
+db.jobs.aggregate([
+    {
+        $lookup: {
+            from: "companies",
+            localField: "company",
+            foreignField: "name",
+            as: "companyDetails"
+        }
+    },
+    { $unwind: "$companyDetails" },
+    {
+        $project: {
+            title: 1,
+            salary: 1,
+            "companyDetails.industry": 1,
+            "companyDetails.employees": 1,
+            _id: 0
+        }
+    }
+])
+
+// $facet — একাধিক Pipeline একসাথে চালান
+// মানে: 'একই ডেটার উপর একসাথে একাধিক ভিন্ন analysis করো'
+// উদাহরণ: একটাই কুয়েরিতে — বেতন রেঞ্জ ব্রেকডাউন, লোকেশন ব্রেকডাউন, এবং Department ব্রেকডাউন
+
+db.jobs.aggregate([
+    { $match: { status: "active" } },
+    {
+        $facet: {
+            salaryBuckets: [
+                {
+                    $bucket: {
+                        groupBy: "$salary",
+                        boundaries: [0, 30000, 60000, 90000, 150000],
+                        default: "Other",
+                        output: { count: { $sum: 1 }, avgSalary: { $avg: "$salary" } }
+                    }
+                }
+            ],
+            byLocation: [
+                { $group: { _id: "$location", total: { $sum: 1 } } },
+                { $sort: { total: -1 } }
+            ],
+            byDepartment: [
+                { $group: { _id: "$department", avgSalary: { $avg: "$salary" } } },
+                { $sort: { avgSalary: -1 } },
+                { $limit: 5 }
+            ]
+        }
+    }
+])
+
+
+

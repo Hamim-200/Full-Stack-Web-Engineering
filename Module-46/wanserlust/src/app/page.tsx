@@ -1,19 +1,16 @@
-import { Banner } from "@/components/banner";
-import { CtaBanner } from "@/components/cta-banner";
-import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/navbar";
-import { Testimonials } from "@/components/testimonials";
-import { WhyChooseUs } from "@/components/why-choose-us";
+import { Banner } from "@/components/home/banner";
+import { CtaBanner } from "@/components/home/cta-banner";
+import { Testimonials } from "@/components/home/testimonials";
+import { WhyChooseUs } from "@/components/home/why-choose-us";
 
 export default function Home() {
   return (
     <main>
-      <Navbar />
+
       <Banner />
       <WhyChooseUs />
       <Testimonials />
       <CtaBanner />
-      <Footer />
     </main>
   );
 }

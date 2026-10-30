@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { Josefin_Sans } from "next/font/google";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+
+
 import "./globals.css";
 
 const josefinSans = Josefin_Sans({
@@ -20,7 +24,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${josefinSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <Navbar />
         {children}
+        <Footer />
+
 
       </body>
     </html>
